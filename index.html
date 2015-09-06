@@ -173,6 +173,138 @@
    		</div>
    	</div>
 
+    <div class="step" data-z="-200" data-rotate-x="90">
+        <div class="container">
+            <h1> Introduccion </h1>
+            <div class="parrafo">
+                <h2>¿Que se conoce como Merge Sort o Ordenamiento de Mezcla?</h2>
+                <p> Es un algoritmo de ordenamiento externo estable basado en la técnica divide y vencerás. Es de complejidad O(n log n).</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="step" data-z="350" data-rotate-x="90" data-rotate-y="180">
+        <div class="container">
+            <h1> Complejidad Computacional </h1>
+            <img src="image/ordenes.png">
+        </div>
+    </div>
+
+    <div id="historia" class="step" data-x="1000" data-rotate-y="-90">
+        <div class="container">
+            <h1> Historia </h1>
+            <div class="parrafo">
+                <ul>
+                    <li>Fue desarrollado en 1945 por John Von Neumann, Es considerado como uno de los más importantes matemáticos de la historia moderna</li>
+                    <li>Neumann contribuciones fundamentales en los campos de física cuántica, análisis funcional, teoría de conjuntos, teoría de juegos, ciencias de la computación, economía, análisis numérico, cibernética, hidrodinámica, estadística</li>
+                    <li>la arquitectura de Von Neumann, es utilizada en casi todos los computadores</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="step" data-x="1000" data-rotate-z="-270">
+        <div class="container">
+            <h1> Instrucciones </h1>
+                <div class="parrafo">
+                    <ol> 
+                        <li>Si la longitud de la lista es 0 ó 1, entonces ya está ordenada. De lo contrario:</li>
+                        <li>Dividir la lista desordenada en dos sublistas de aproximadamente la mitad del tamaño.</li>
+                        <li>Ordenar cada sublista recursivamente aplicando el ordenamiento por mezcla.</li>
+                        <li>Mezclar las dos sublistas en una sola lista ordenada.</li>
+                    </ol>
+                </div>
+        </div>
+    </div>
+
+    <div class="step" data-x="-1000" data-rotate-y="90">
+        <div class="container">
+            <h1> Desarollo </h1>
+            <img src="image/merge-sort1.gif">
+        </div>
+    </div>
+
+        <div class="step" data-x="-1000" data-rotate-z="90">
+        <div class="container">
+            <h1> Desarollo </h1>
+            <img src="image/merge-sort.gif" style="width:400px">
+        </div>
+    </div>
+
+
+        <div class="step" data-y="-700">
+        <div class="container">
+        <div class="inline-block left">
+            <pre>
+void merge(int arr[], int l, int m, int r){
+    int i, j, k;
+    int n1 = m - l + 1;
+    int n2 =  r - m;
+
+    int L[n1], R[n2];//Crear arreglos temporales
+
+    /* copiar datos a los arreglos 
+    temporales L[] y R[] */
+    for(i = 0; i < n1; i++)
+        L[i] = arr[l + i];
+    for(j = 0; j < n2; j++)
+        R[j] = arr[m + 1+ j];
+
+    /* mezclar arreglos temporales 
+    en arr[l..r]*/
+    i = 0; j = 0; k = l;
+    while (i < n1 && j < n2){
+        if (L[i] <= R[j]){
+            arr[k] = L[i];
+            i++;
+        }else{
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+        </pre>
+        </div>
+        <div class="inline-block right">
+            <pre>
+        /* copiar elementos restantes de L[], 
+        si hay */
+        while (i < n1){
+            arr[k] = L[i];
+            i++;
+            k++;
+        }
+
+        /* copiar elementos restantes de R[], 
+        si hay */
+        while (j < n2){
+            arr[k] = R[j];
+            j++;
+            k++;
+        }
+    }
+
+    void mergeSort(int arr[], int l, int r){
+        if (l < r)
+        {
+            int m = (l+r)/2;
+            mergeSort(arr, l, m);
+            mergeSort(arr, m+1, r);
+            merge(arr, l, m, r);
+        }
+    }
+            </pre>
+        </div>
+        </div>
+    </div>
+
+        <div class="step" data-x="5600" data-y="0">
+        <div class="container">
+            <h1> That is all nigga </h1>
+        </div>
+    </div>
+
 <!--
 Slide 2 Introduccion
 Que es Merge Sort o Ordenamiento de Mezcla

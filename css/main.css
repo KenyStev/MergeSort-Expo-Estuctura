@@ -1,0 +1,54 @@
+* {
+	color: white;
+}
+
+body{
+	background: black;
+}
+
+h1,h2,h3,h4,h5,h6{
+	text-align: center;
+}
+
+h1{
+	font-size: 50px;
+	font-weight: bolder;
+}
+
+.step, div .container{
+	border: 2px solid white;
+}
+
+.parrafo{
+	text-align: center;
+	font-size: 30px;
+}
+
+ul,ol{
+	text-align: left;
+	text-decoration: blink;
+}
+
+.inline-block{
+	display: inline-block;
+}
+
+.left{
+	float: left;
+	width: 50%;
+}
+
+.right{
+	float: right;
+	width: 50%;
+}
+
+.container img{
+	display: block;
+	margin: auto;
+}
+
+pre{
+	font-family: monospace;
+	font-size: 15px;
+}
